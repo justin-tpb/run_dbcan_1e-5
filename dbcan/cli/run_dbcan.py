@@ -365,7 +365,7 @@ def run_dbCAN(
                     for line in f:
                         row = line.rstrip().split("\t")
                         row.append(str(float(int(row[6]) - int(row[5])) / int(row[1])))
-                        if float(row[4]) <= 1e-15 and float(row[-1]) >= 0.35:
+                        if float(row[4]) <= 1e-5 and float(row[-1]) >= 0.35:
                             processed_lines.append("\t".join(row))
             
             # Process dbcan-sub.hmm.out content
